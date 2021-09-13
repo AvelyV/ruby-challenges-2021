@@ -12,3 +12,25 @@
 
 # Once you are able to output the correct output when running your code, try finding a way to get input from a user when they run your code. 
 # Then convert that input to a new "th" replaced string
+
+puts 'Enter some text'
+input = gets.chomp
+
+
+# input.gsub!("s", "th")
+
+#only changes 1st instance
+# input['s'] = 'th'
+
+
+input = input.split("")
+
+input.map! do |letter|
+    if letter == 's'
+        letter = 'th'
+    end
+    letter
+    # letter == 's' ? 'th' : letter
+end
+
+p input
